@@ -10,7 +10,7 @@
 
 
 import express from 'express'
-import { userQuery } from '../controllers/ai_controls.js'  // ✅ Note: "controllers", not "controles"
+import { userQuery, userQueryStream } from '../controllers/ai_controls.js'  // ✅ Note: "controllers", not "controles"
 const router = express.Router()
 
 router.get('/new', (req, res) => {
@@ -18,5 +18,6 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/ask', userQuery)
+router.post('/ask/stream', userQueryStream)
 
 export default router

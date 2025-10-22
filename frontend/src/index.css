@@ -3,6 +3,17 @@
   margin: 0;
   /* background: hsla(0, 39%, 43%, 0.151); */
 }
+.typing::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.break-words {
+  word-break: break-word;
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
