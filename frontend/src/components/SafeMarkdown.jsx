@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 const SafeMarkdown = ({ content }) => {
   return (
-    <div className="prose prose-sm max-w-none text-white">
+    <div className="prose prose-sm max-w-none text-white whitespace-pre-wrap">
       <ReactMarkdown>
         {content}
       </ReactMarkdown>

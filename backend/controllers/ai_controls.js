@@ -218,7 +218,6 @@ export const userQuery = async (req, res) => {
 //     res.end();
 //   }
 // };
-
 // ... (Your existing imports)
 
 export const userQueryStream = async (req, res) => {
@@ -296,8 +295,7 @@ export const userQueryStream = async (req, res) => {
     });
 
     let buffer = "";
-    const wordBoundaryRegex = /[\s.,!?;:]/g;
-
+const wordBoundaryRegex = /[\s.,!?;:]/g;
 
     for await (const chunk of stream) {
       const token = chunk.choices[0]?.delta?.content || "";
